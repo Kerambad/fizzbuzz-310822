@@ -5,21 +5,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FizzbuzzTest {
 
     @Test
-        void fizzbuzzTest () {
+    void fizzbuzzTest () {
 
         //given
 
-        int number = 15;
+        int[] number = {15,30};
 
-        //when
+        for (int i = 0; i < number.length; i++) {
 
-        String actual = Fizzbuzz.fizzbuzz(number);
+            //when
 
-        //then
+            String actual = Fizzbuzz.fizzbuzz(number[i]);
 
-        assertEquals("fizzbuzz",actual);
+            //then
 
+            assertEquals("fizzbuzz", actual);
 
+        }
     }
 
     @Test
@@ -27,17 +29,19 @@ public class FizzbuzzTest {
 
         //given
 
-        int number = 5;
+        int[] number = {5,10,20,25};
 
-        //when
+        for (int i = 0; i < number.length; i++) {
 
-        String actual = Fizzbuzz.fizzbuzz(number);
+            //when
 
-        //then
+            String actual = Fizzbuzz.fizzbuzz(number[i]);
 
-        assertEquals("buzz",actual);
+            //then
 
+            assertEquals("buzz", actual);
 
+        }
     }
 
     @Test
@@ -45,17 +49,19 @@ public class FizzbuzzTest {
 
         //given
 
-        int number = 3;
+        int[] number = {3,6,9,12,18,21,24,27};
 
-        //when
+        for (int i = 0; i < number.length; i++) {
 
-        String actual = Fizzbuzz.fizzbuzz(number);
+            //when
 
-        //then
+            String actual = Fizzbuzz.fizzbuzz(number[i]);
 
-        assertEquals("fizz",actual);
+            //then
 
+            assertEquals("fizz", actual);
 
+        }
     }
 
     @Test
@@ -63,16 +69,18 @@ public class FizzbuzzTest {
 
         //given
 
-        int number = 2;
+        int[] number = {1,2,4,7,8,11,13,14,17,19,22,23};
 
-        //when
+        for (int i = 0; i < number.length; i++) {
 
-        String actual = Fizzbuzz.fizzbuzz(number);
+            //then
 
-        //then
+            String actual = Fizzbuzz.fizzbuzz(number[i]);
 
-        assertEquals(String.valueOf(number),actual);
+            //when
 
+            assertEquals(String.valueOf(number[i]), actual);
+        }
 
     }
 }
