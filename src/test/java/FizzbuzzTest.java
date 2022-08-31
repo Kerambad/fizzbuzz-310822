@@ -57,4 +57,22 @@ public class FizzbuzzTest {
 
 
     }
+
+    @Test
+    void numberTest () {
+
+        //given
+
+        int number = 2;
+
+        //when
+
+        String actual = Fizzbuzz.fizzbuzz(number);
+
+        //then
+
+        assertEquals(String.valueOf(number),actual);
+
+
+    }
 }
